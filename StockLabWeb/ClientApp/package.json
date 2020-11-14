@@ -14,8 +14,6 @@
   "dependencies": {
     "@angular-devkit/schematics": "^11.0.1",
     "@angular/compiler": "10.1.4",
-    "@angular/forms": "10.1.4",
-    "@angular/platform-browser": "10.1.4",
     "@angular/platform-browser-dynamic": "10.1.4",
     "@angular/platform-server": "10.1.4",
     "@angular/router": "10.1.4",
