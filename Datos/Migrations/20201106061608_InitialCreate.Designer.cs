@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Datos.Migrations
 {
     [DbContext(typeof(StockLabContext))]
-    [Migration("20201103000516_InitialCreate")]
+    [Migration("20201106061608_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -152,8 +152,8 @@ namespace Datos.Migrations
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime");
 
-                    b.Property<DateTime>("FechaEntrega")
-                        .HasColumnType("datetime");
+                    b.Property<string>("FechaEntrega")
+                        .HasColumnType("varchar(20)");
 
                     b.Property<string>("Hora")
                         .IsRequired()

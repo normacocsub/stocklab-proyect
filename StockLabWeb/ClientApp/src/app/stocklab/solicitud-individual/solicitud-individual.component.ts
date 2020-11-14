@@ -22,8 +22,11 @@ export class SolicitudIndividualComponent implements OnInit {
     this.solicitudService.get(id).subscribe(result => {
       this.Solicitud = result;
     })
-    console.log(this.Solicitud.cantidadinsumos);
+
+    
   }
+
+  
   
 
 }

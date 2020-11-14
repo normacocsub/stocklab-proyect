@@ -54,7 +54,7 @@ namespace Entity
         {
             protected override ValidationResult IsValid(object value, ValidationContext validationContext)
             {
-                if (((int.Parse(value.ToString()) < 18) || (int.Parse(value.ToString()) > 100)))
+                if (((int.Parse(value.ToString()) > 18) || (int.Parse(value.ToString()) < 100)))
                 {
                     return ValidationResult.Success;
                 }

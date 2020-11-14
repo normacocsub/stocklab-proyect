@@ -11,7 +11,7 @@ import { DetalleInsumo } from '../models/detalle-insumo';
 import { Insumo } from '../models/insumo';
 import { Persona } from '../models/persona';
 import { Solicitud } from '../models/solicitud';
-import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
+import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-gestion-solicitudes',
@@ -95,39 +95,39 @@ export class GestionSolicitudesComponent implements OnInit {
       this.stringInsumo = this.formGroup.value.detalle;
       this.arrayinsumo = this.stringInsumo.split(';');
       this.insumo = this.insumos.find(I => I.item == this.arrayinsumo[1]);
-      if(this.detalle.cantidad > this.insumo.cantidad){
+      if (this.detalle.cantidad > this.insumo.cantidad) {
         const messageBox = this.modalService.open(ModalComponent)
         messageBox.componentInstance.title = "Resultado Operación";
         messageBox.componentInstance.cuerpo = 'Error: la cantidad es mayor a la disponible ';
       }
-      else{
-        this.detalle.codigoinsumo = this.insumo.item;
-      this.detalle.insumo = this.insumo;
-      this.detalle.fecha = fecha.getDate() + "/" + (fecha.getMonth() + 1) + "/" + fecha.getFullYear();
-      this.detalle.numeroDetalle = (this.detalles.length + 1).toString();
-      var detallerespuesta = this.detalles.find(d => d.insumo.item == this.insumo.item);
-      if (detallerespuesta != null) {
-        var numero = this.detalles.findIndex(d => d.insumo.item == this.insumo.item)
-        this.detalles[numero].cantidad += this.detalle.cantidad;
-        this.detalles[numero].fecha = this.detalle.fecha;
-      }
       else {
-        this.detalles.push(this.detalle);
-        this.solicitud.detalles = this.detalles;
-        this.detalle = new DetalleInsumo;
-        //this.option = true;
-      }
-      const messageBox = this.modalService.open(ModalComponent)
-      messageBox.componentInstance.title = "Resultado Operación";
-      messageBox.componentInstance.cuerpo = 'Se ha añadido el insumo';
+        this.detalle.codigoinsumo = this.insumo.item;
+        this.detalle.insumo = this.insumo;
+        this.detalle.fecha = fecha.getDate() + "/" + (fecha.getMonth() + 1) + "/" + fecha.getFullYear();
+        this.detalle.numeroDetalle = (this.detalles.length + 1).toString();
+        var detallerespuesta = this.detalles.find(d => d.insumo.item == this.insumo.item);
+        if (detallerespuesta != null) {
+          var numero = this.detalles.findIndex(d => d.insumo.item == this.insumo.item)
+          this.detalles[numero].cantidad += this.detalle.cantidad;
+          this.detalles[numero].fecha = this.detalle.fecha;
+        }
+        else {
+          this.detalles.push(this.detalle);
+          this.solicitud.detalles = this.detalles;
+          this.detalle = new DetalleInsumo;
+          //this.option = true;
+        }
+        const messageBox = this.modalService.open(ModalComponent)
+        messageBox.componentInstance.title = "Resultado Operación";
+        messageBox.componentInstance.cuerpo = 'Se ha añadido el insumo';
       }
     }
   }
 
-  private validCantidad(control: AbstractControl){
+  private validCantidad(control: AbstractControl) {
     const cantidad = control.value;
-    if(cantidad <= 0){
-      return { validCantidad: true, messageCantidad: 'La cantidad no puede ser menor o igual a 0'};
+    if (cantidad <= 0) {
+      return { validCantidad: true, messageCantidad: 'La cantidad no puede ser menor o igual a 0' };
     }
   }
   private validafecha(control: AbstractControl) {
@@ -159,7 +159,7 @@ export class GestionSolicitudesComponent implements OnInit {
       messageBox.componentInstance.title = "Resultado Operación";
       messageBox.componentInstance.cuerpo = 'Error: No ha agregado ningun detalle';
     }
-    if(this.persona == null){
+    if (this.persona == null) {
       const messageBox = this.modalService.open(ModalComponent)
       messageBox.componentInstance.title = "Resultado Operación";
       messageBox.componentInstance.cuerpo = 'Error: No ha agregado una persona a la solicitud';
@@ -167,7 +167,7 @@ export class GestionSolicitudesComponent implements OnInit {
     this.agregar();
   }
 
-  
+
 
   buscarpersona() {
     var id = this.formGroup.value.identificacion;
@@ -196,6 +196,7 @@ export class GestionSolicitudesComponent implements OnInit {
   }
 
   mapear() {
+    this.stringasi = [];
     this.stringAsignaturas = this.formGroup.value.asignatura;
     this.stringasi = this.stringAsignaturas.split(';');
     this.asignatura = this.asignaturas.find(a => a.codigo == this.stringasi[1]);

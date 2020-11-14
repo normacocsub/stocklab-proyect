@@ -28,5 +28,12 @@ export class HomeComponent {
     })
   }
 
+  updateEstado(solicitud: Solicitud){
+    solicitud.estado = "leido";
+    this.SolicitudService.put(solicitud).subscribe(result => {
+        solicitud = result;
+    });
+  }
+
 }
 

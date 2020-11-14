@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IkQV1k/j8iOS9X9dEwrd2ITW82pg516b4leOO2lItSQctXX/WH3+PxOgyvqVgjLYAdMD7RYT9t7otuyxNH5eWQ==",
+  "dgSpecHash": "9RSUzcREFKK6xO+oJzKTtNOg2TtGCPOX/64ToLZ84yGzDHu5WUU0Sc+AD3ZnZW0JTy4Mar0/TJs4R0Q/V8qZBw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\norma\\Desktop\\stock-lab-2-main\\Datos\\Datos.csproj",
+  "projectFilePath": "C:\\Users\\norma\\Documents\\GitHub\\stocklab-proyect\\Datos\\Datos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\norma\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\norma\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

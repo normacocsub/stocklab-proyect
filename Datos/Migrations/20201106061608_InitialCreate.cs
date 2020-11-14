@@ -80,7 +80,7 @@ namespace Datos.Migrations
                 {
                     Numero = table.Column<string>(type: "varchar(5)", nullable: false),
                     Fecha = table.Column<DateTime>(type: "datetime", nullable: false),
-                    FechaEntrega = table.Column<DateTime>(type: "datetime", nullable: false),
+                    FechaEntrega = table.Column<string>(type: "varchar(20)", nullable: true),
                     Estado = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: true),
                     Hora = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: false),
                     Monitor = table.Column<string>(type: "varchar(15)", maxLength: 15, nullable: false),

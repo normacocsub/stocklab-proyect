@@ -77,6 +77,31 @@ namespace StockLabWeb.Controllers
             return Ok(new SolicitudViewModel(response.Solicitud));
         }
 
+        //api/Solicitud/5
+        [HttpPut("{numero}")]
+        public ActionResult<string> Put(string numero, SolicitudInputModel solicitud)
+        {
+            var response = _service.ActualizarEstado(numero, solicitud.Estado);
+
+            if(response.Error)
+            {
+                ModelState.AddModelError("Error al modificar la solicitud", response.Mensaje);
+                var detallesproblemas = new ValidationProblemDetails(ModelState);
+
+                if(response.Mensaje == "No existe")
+                {
+                    detallesproblemas.Status = StatusCodes.Status404NotFound;
+                }
+                else
+                {
+                    detallesproblemas.Status = StatusCodes.Status500InternalServerError;
+                }
+                return BadRequest(detallesproblemas);
+            }
+            return Ok(response.Solicitud);
+        }
+
+
 
 
 

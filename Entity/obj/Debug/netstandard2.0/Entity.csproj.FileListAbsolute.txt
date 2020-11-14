@@ -52,3 +52,12 @@ C:\Users\norma\Desktop\stock-lab-2-main\Entity\obj\Debug\netstandard2.0\Entity.A
 C:\Users\norma\Desktop\stock-lab-2-main\Entity\obj\Debug\netstandard2.0\Entity.csproj.CoreCompileInputs.cache
 C:\Users\norma\Desktop\stock-lab-2-main\Entity\obj\Debug\netstandard2.0\Entity.dll
 C:\Users\norma\Desktop\stock-lab-2-main\Entity\obj\Debug\netstandard2.0\Entity.pdb
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Entity\bin\Debug\netstandard2.0\Entity.deps.json
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Entity\bin\Debug\netstandard2.0\Entity.dll
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Entity\bin\Debug\netstandard2.0\Entity.pdb
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Entity\obj\Debug\netstandard2.0\Entity.csprojAssemblyReference.cache
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Entity\obj\Debug\netstandard2.0\Entity.AssemblyInfoInputs.cache
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Entity\obj\Debug\netstandard2.0\Entity.AssemblyInfo.cs
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Entity\obj\Debug\netstandard2.0\Entity.csproj.CoreCompileInputs.cache
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Entity\obj\Debug\netstandard2.0\Entity.dll
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Entity\obj\Debug\netstandard2.0\Entity.pdb

@@ -22,7 +22,6 @@ namespace Logica
                 int total = _context.Solicitudes.ToList().Count;
                 solicitud.Numero = (total + 1).ToString();
                 int suma = solicitud.Detalles.Sum(c => c.Cantidad);
-                solicitud.FechaEntrega = DateTime.Now;
                 solicitud.CantidadInsumos = suma;
                 foreach (var item in solicitud.Detalles)
                 {
@@ -85,6 +84,46 @@ namespace Logica
             {
                 return new BuscarSolicitudResponse($"Error: {e.Message}");
             }
+        }
+
+        public ActualizarSolicitudResponse ActualizarEstado(string numero, string estado)
+        {
+            try
+            {
+                var solicitudresponse = _context.Solicitudes.Find(numero);
+                if(solicitudresponse != null)
+                {
+                    solicitudresponse.Estado = estado;
+                    _context.Solicitudes.Update(solicitudresponse);
+                    _context.SaveChanges();
+                    return new ActualizarSolicitudResponse(solicitudresponse);
+                }
+                else
+                {
+                    return new ActualizarSolicitudResponse("No existe");
+                }
+            }
+            catch(Exception e)
+            {
+                return new ActualizarSolicitudResponse($"Error: {e.Message}");
+            }
+        }
+
+        public class ActualizarSolicitudResponse
+        {
+            public ActualizarSolicitudResponse(Solicitud solicitud)
+            {
+                Solicitud = solicitud;
+                Error = false;
+            }
+            public ActualizarSolicitudResponse(string mensaje)
+            {
+                Error = true;
+                Mensaje = mensaje;
+            }
+            public bool Error { get; set; }
+            public string Mensaje { get; set; }
+            public Solicitud Solicitud { get; set; }
         }
 
         public class BuscarSolicitudResponse

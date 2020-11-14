@@ -1,9 +1,21 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { HandleHttpErrorService } from '../@base/handle-http-error.service';
 import { Solicitud } from '../stocklab/models/solicitud';
+
+const httpOptionsPut = {
+  headers: new HttpHeaders({
+    "Content-Type": "application/json"
+  }), responseType: "text",
+};
+
+const httpOptions = {
+  headers:new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+};
 
 @Injectable({
   providedIn: 'root'
@@ -37,5 +49,13 @@ export class SolicitudService {
       tap(_ => this.handleErrorService.log('Datos')),
       catchError(this.handleErrorService.handleError<Solicitud>('Consulta Solicitud', null))
     );
+  }
+
+  put(solicitud: Solicitud): Observable<Solicitud>
+  {
+    return this.http.put<Solicitud>(this.baseUrl+'api/Solicitud/'+solicitud.numero, solicitud, httpOptions)
+    .pipe(tap(_ => this.handleErrorService.log('Solicitud Actualizada')),
+    catchError(this.handleErrorService.handleError<Solicitud>('Estado Solicitud'))
+      );
   }
 }

@@ -29,7 +29,6 @@ namespace Datos
             modelBuilder.Entity<Solicitud>()
             .HasOne<Persona>().WithMany()
             .HasForeignKey(p => p.IdPersona);
-
         }
     }
 }

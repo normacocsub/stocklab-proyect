@@ -70,3 +70,15 @@ C:\Users\norma\Desktop\stock-lab-2-main\Datos\obj\Debug\netstandard2.0\Datos.csp
 C:\Users\norma\Desktop\stock-lab-2-main\Datos\obj\Debug\netstandard2.0\Datos.csproj.CopyComplete
 C:\Users\norma\Desktop\stock-lab-2-main\Datos\obj\Debug\netstandard2.0\Datos.dll
 C:\Users\norma\Desktop\stock-lab-2-main\Datos\obj\Debug\netstandard2.0\Datos.pdb
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Datos\bin\Debug\netstandard2.0\Datos.deps.json
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Datos\bin\Debug\netstandard2.0\Datos.dll
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Datos\bin\Debug\netstandard2.0\Datos.pdb
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Datos\bin\Debug\netstandard2.0\Entity.dll
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Datos\bin\Debug\netstandard2.0\Entity.pdb
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Datos\obj\Debug\netstandard2.0\Datos.csprojAssemblyReference.cache
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Datos\obj\Debug\netstandard2.0\Datos.AssemblyInfoInputs.cache
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Datos\obj\Debug\netstandard2.0\Datos.AssemblyInfo.cs
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Datos\obj\Debug\netstandard2.0\Datos.csproj.CoreCompileInputs.cache
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Datos\obj\Debug\netstandard2.0\Datos.csproj.CopyComplete
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Datos\obj\Debug\netstandard2.0\Datos.dll
+C:\Users\norma\Documents\GitHub\stocklab-proyect\Datos\obj\Debug\netstandard2.0\Datos.pdb

@@ -14,8 +14,8 @@ namespace Entity
         [Required(ErrorMessage = "Se requiere la fecha")]
         [Column(TypeName = "datetime")]
         public DateTime Fecha { get; set; }
-        [Column(TypeName = "datetime")]
-        public DateTime FechaEntrega { get; set; }
+        [Column(TypeName = "varchar(20)")]
+        public string FechaEntrega { get; set; }
         [Column(TypeName = "varchar(10)")]
         [StringLength(10, ErrorMessage = "Estado muy largo")]
         public string Estado { get; set; }
