@@ -1,3 +1,4 @@
+
 using System;
 using System.Linq;
 using Datos;
@@ -9,6 +10,7 @@ using StockLabWeb.Models;
 
 namespace StockLabWeb.Controllers
 {
+    
     [Route("api/[controller]")]
     [ApiController]
     public class SolicitudController : ControllerBase

@@ -1,3 +1,4 @@
+
 using Microsoft.AspNetCore.Mvc;
 using Logica;
 using Microsoft.Extensions.Configuration;
@@ -10,6 +11,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace StockLabWeb.Controllers
 {
+    
     
     [Route("api/[controller]")]
     [ApiController]

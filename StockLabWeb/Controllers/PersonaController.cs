@@ -1,3 +1,4 @@
+
 using Datos;
 using Entity;
 using Logica;
@@ -7,6 +8,7 @@ using StockLabWeb.Models;
 
 namespace StockLabWeb.Controllers
 {
+    
     [Route("api/[controller]")]
     [ApiController]
     public class PersonaController : ControllerBase

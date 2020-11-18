@@ -1,3 +1,4 @@
+
 using Datos;
 using Entity;
 using Logica;
@@ -15,7 +16,7 @@ using StockLabWeb.Servicios;
 
 namespace StockLabWeb.Controllers
 {
-
+    
     [Authorize]
     [ApiController]
     [Route("api/[controller]")]

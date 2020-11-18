@@ -1,3 +1,4 @@
+
 using System.Linq;
 using Datos;
 using Entity;
@@ -8,6 +9,7 @@ using StockLabWeb.Models;
 
 namespace StockLabWeb.Controllers
 {
+    
     [Route("api/[controller]")]
     [ApiController]
     public class InsumoController : ControllerBase
