@@ -26,23 +26,22 @@ export class LoginService {
   }
 
   login(password: string, usuario: string) {
-
-    this.usuario = new Usuario;
-    if(password == "admin" && usuario == "admin"){
-      this.usuario.password = password;
-      this.usuario.user = usuario;
-      sessionStorage.setItem('login',JSON.stringify(this.usuario));
-      this.currentUserSubject.next(this.usuario);
-      this.route.navigate(['/Home']);
-    }
-    else{
-      alert("Contraseña incorrecta");
-    }
+    return this.http.post<any>(`${this.Url}api/login`,{usuario,password})
+    .pipe(map(user => {
+      sessionStorage.setItem('login',JSON.stringify(user));
+      return user;
+      
+    }));
   }
   
 
   public get currentUserValue(): Usuario {
     return this.currentUserSubject.value;
+  }
+
+  logout(){
+    sessionStorage.removeItem('login');
+    this.currentUserSubject.next(null);
   }
 
 }

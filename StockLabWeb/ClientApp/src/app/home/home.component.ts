@@ -12,10 +12,7 @@ import { Usuario } from './../stocklab/models/usuario';
 export class HomeComponent {
   usuario: Usuario;
   solicitudes: Solicitud[];
-  constructor(private LoginService: LoginService, private SolicitudService: SolicitudService) {
-    this.LoginService.currentUser.subscribe(x => this.usuario = x);
-    localStorage.setItem('login',JSON.stringify(this.usuario));
-  }
+  constructor(private LoginService: LoginService, private SolicitudService: SolicitudService) {}
 
   ngOnInit(): void {
     this.solicitudes = []

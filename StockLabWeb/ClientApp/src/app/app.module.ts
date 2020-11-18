@@ -31,6 +31,7 @@ import { ModalComponent } from './@base/modal/modal.component';
 import { AsignaturaService } from './services/asignatura.service';
 import { FiltroAsignaturaPipe } from './pipe/filtro-asignatura.pipe';
 import { FiltroInsumoPipe } from './pipe/filtro-insumo.pipe';
+import { JwtInterceptor } from './services/jwt.interceptor';
 
 
 
@@ -72,7 +73,7 @@ import { FiltroInsumoPipe } from './pipe/filtro-insumo.pipe';
     ]),
     AppRoutingModule
   ],
-  providers: [LoginService, AsignaturaService],
+  providers: [LoginService, AsignaturaService, {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
